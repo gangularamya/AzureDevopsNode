@@ -22,10 +22,10 @@ steps:
 
 - task: ArchiveFiles@2
   inputs:
-    rootFolderOrFile: '$(Build.BinariesDirectory)/www' 
+    rootFolderOrFile: '$(Build.BinariesDirectory)' 
     includeRootFolder: true
     archiveType: 'zip'
-    tarCompression: 'gz' # Optional. Options: gz, bz2, xz, none
+    tarCompression: none # Optional. Options: gz, bz2, xz, none
     archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip' 
     replaceExistingArchive: true 
 
